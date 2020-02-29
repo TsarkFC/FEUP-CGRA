@@ -91,10 +91,6 @@ class MyScene extends CGFscene {
 
         // ---- BEGIN Primitive drawing section
 
-        //Exercise 1.1
-        //this.diamond.display();
-        //this.triangle.display();
-
         //Exercise 1.2
         if (this.displayDiamond)
             this.diamond.display();
