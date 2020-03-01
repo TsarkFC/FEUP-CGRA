@@ -22,33 +22,14 @@ class MyScene extends CGFscene {
         //Initialize scene objects
         this.axis = new CGFaxis(this);
 
-        //--> Default diamond
-        this.diamond = new MyDiamond(this);
+        this.tangram = new MyTangram(this);
 
-        //--> Exercise 1.1
-        this.triangle = new MyTriangle(this);
-
-        //--> Exercise 1.3
-        this.parallelogram = new MyParallelogram(this);
-
-        //--> Exercise 2
-        this.triangle_small = new MyTriangleSmall(this);
-        this.triangle_big = new MyTriangleBig(this);
+        //--> Unit Cube
+        this.unitCube = new MyUnitCube(this);
 
         //Objects connected to MyInterface
         this.displayAxis = true;
         this.scaleFactor = 1;
-
-        //Exercise 1.2
-        this.displayDiamond = true;
-        this.displayTriangle = true;
-        
-        //Exercise 1.3
-        this.displayParallelogram = true;
-
-        //Exercise 2
-        this.displaySmall = true;
-        this.displayBig = true;
     }
     initLights() {
         this.lights[0].setPosition(15, 2, 5, 1);
@@ -91,23 +72,10 @@ class MyScene extends CGFscene {
 
         // ---- BEGIN Primitive drawing section
 
-        //Exercise 1.2
-        if (this.displayDiamond)
-            this.diamond.display();
-
-        if (this.displayTriangle)
-            this.triangle.display();
-
-        //Exercise 1.3
-        if (this.displayParallelogram)
-            this.parallelogram.display();
-
-        //Exercise 2
-        if (this.displaySmall)
-            this.triangle_small.display();
-        if (this.displayBig)
-            this.triangle_big.display();
-
+        this.tangram.display();
+        this.unitCube.display();
+        
+       
         // ---- END Primitive drawing section
     }
 }
