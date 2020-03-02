@@ -10,14 +10,14 @@ class MyUnitCube extends CGFobject {
 	}
 	initBuffers() {
 		this.vertices = [
-			-0.5, -0.5, 0.5,//0 Bottom left (z>0)
-			0.5, -0.5, 0.5,	//1 Bottom right (z>0)
-			0.5, 0.5, 0.5,	//2 Top right (z>0)
-            -0.5, 0.5, 0.5,  //3 Top left (z>0)
-            -0.5, -0.5, -0.5,//4 Bottom left (z<0)
+			-0.5, -0.5, 0.5,	//0 Bottom left (z>0)
+			0.5, -0.5, 0.5,		//1 Bottom right (z>0)
+			0.5, 0.5, 0.5,		//2 Top right (z>0)
+            -0.5, 0.5, 0.5,  	//3 Top left (z>0)
+            -0.5, -0.5, -0.5,	//4 Bottom left (z<0)
 			0.5, -0.5, -0.5,	//5 Bottom right (z<0)
-			0.5, 0.5, -0.5,	//6 Top right (z<0)
-            -0.5, 0.5, -0.5  //7Top left (z<0)
+			0.5, 0.5, -0.5,		//6 Top right (z<0)
+            -0.5, 0.5, -0.5  	//7 Top left (z<0)
 		];
 
 		//Counter-clockwise reference of vertices
@@ -32,11 +32,13 @@ class MyUnitCube extends CGFobject {
             5, 6, 1,
 
             0, 3, 7, //Plano zy negativo (ccw)
-            0, 7, 4
+            0, 7, 4,
 
-            
-            
-
+			5, 1, 0, //Plano zx negativo (ccw)
+			0, 4, 5,
+			
+			2, 6, 7, //Plano zx positivo (cw)
+			7, 3, 2
 		];
 
 		//The defined indices (and corresponding vertices)
