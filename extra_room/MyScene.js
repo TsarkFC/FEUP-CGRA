@@ -22,8 +22,9 @@ class MyScene extends CGFscene {
         //Initialize scene objects
         this.axis = new CGFaxis(this);
 
-        //Chair testing
-        this.chair = new MyChair(this);
+        //Block
+        this.block = new MyBlock(this);
+        this.board = new MyUnitCubeQuad(this);
 
         //Objects connected to MyInterface
         this.displayAxis = true;
@@ -69,7 +70,34 @@ class MyScene extends CGFscene {
         this.multMatrix(sca);
 
         // ---- BEGIN Primitive drawing section
-        this.chair.display(this);
+
+        //Block 1
+        this.block.display();
+
+        //Block 2
+        this.pushMatrix();
+        this.translate(4,4,0);
+        this.block.display();
+        this.popMatrix();
+
+        //Block 3
+        this.pushMatrix();
+        this.translate(0,4,0);
+        this.block.display();
+        this.popMatrix();
+        
+        //Block 4
+        this.pushMatrix();
+        this.translate(4,0,0);
+        this.block.display();
+        this.popMatrix();
+
+        //White Board
+        this.pushMatrix();
+        this.translate(0,5,2.5);
+        this.scale(0.1, 5, 2.5);
+        this.board.display();
+        this.popMatrix();
 
        
         // ---- END Primitive drawing section
