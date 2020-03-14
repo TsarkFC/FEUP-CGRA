@@ -7,9 +7,13 @@ class MyTangram extends CGFobject {
 	constructor(scene) {
 		super(scene);
 		
-        this.diamond = new MyDiamond(this.scene);
-        this.parallelogram = new MyParallelogram(this.scene);
-        this.triangle_big = new MyTriangleBig(this.scene);
+        this.green_diamond = new MyDiamond(this.scene);
+        this.yellow_parallelogram = new MyParallelogram(this.scene);
+        this.orange_triangle_big = new MyTriangleBig(this.scene);
+        this.blue_triangle_big = new MyTriangleBig(this.scene);
+        this.pink_triangle_big = new MyTriangleBig(this.scene);
+        this.red_triangle_big = new MyTriangleBig(this.scene);
+        this.purple_triangle_big = new MyTriangleBig(this.scene);
     }
     
 	display(){
@@ -20,18 +24,18 @@ class MyTangram extends CGFobject {
 			   
         this.scene.pushMatrix();
         this.scene.multMatrix(transl);
-        this.diamond.display();
+        this.green_diamond.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.rotate(Math.PI * 0.25, 0.0, 0.0, 1.0);
         this.scene.translate(2, 0, 0);
-        this.triangle_big.display();
+        this.orange_triangle_big.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.rotate(-Math.PI * 0.75, 0.0, 0.0, 1.0);
-		this.triangle_big.display();
+		this.blue_triangle_big.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
@@ -39,14 +43,14 @@ class MyTangram extends CGFobject {
         this.scene.pushMatrix();
         this.scene.scale(0.75, 0.75, 0.75);
         this.scene.rotate(-Math.PI * 0.5, 0.0, 0.0, 1.0);
-        this.triangle_big.display();
+        this.pink_triangle_big.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.translate(0.625, -1.875 , 0.0);
         this.scene.scale(0.5, 0.5, 0.5);
         this.scene.rotate(Math.PI * 0.5, 0.0, 0.0, 1.0);
-        this.triangle_big.display();
+        this.red_triangle_big.display();
         this.scene.popMatrix();
         this.scene.popMatrix();
 
@@ -54,32 +58,44 @@ class MyTangram extends CGFobject {
 		this.scene.translate(-Math.sqrt(2), -Math.sqrt(2) * 1.5, 0.0);
         this.scene.rotate(Math.PI * 0.25, 0.0, 0.0, 1.0);
         this.scene.scale(0.5, 0.5, 0.5);
-        this.triangle_big.display();
+        this.purple_triangle_big.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.translate(Math.sqrt(8) + Math.sqrt(2), Math.sqrt(8), 0);
         this.scene.scale(1.0, -1.0, 1.0);
         this.scene.rotate(Math.PI * 0.75, 0.0, 0.0, 1.0);
-        this.parallelogram.display();
+        this.yellow_parallelogram.display();
         this.scene.popMatrix();
     }
 
     updateBuffers(complexity){
-        this.triangle_big.updateBuffers();
-        this.parallelogram.updateBuffers();
-        this.diamond.updateBuffers();
+        this.orange_triangle_big.updateBuffers();
+        this.blue_triangle_big.updateBuffers();
+        this.pink_triangle_big.updateBuffers();
+        this.red_triangle_big.updateBuffers();
+        this.purple_triangle_big.updateBuffers();
+        this.yellow_parallelogram.updateBuffers();
+        this.green_diamond.updateBuffers();
     }
 	
 	enableNormalViz(){
-        this.triangle_big.enableNormalViz();
-        this.diamond.enableNormalViz();
-        this.parallelogram.enableNormalViz();
+        this.orange_triangle_big.enableNormalViz();
+        this.blue_triangle_big.enableNormalViz();
+        this.pink_triangle_big.enableNormalViz();
+        this.red_triangle_big.enableNormalViz();
+        this.purple_triangle_big.enableNormalViz();
+        this.green_diamond.enableNormalViz();
+        this.yellow_parallelogram.enableNormalViz();
     }
 	disableNormalViz(){
-        this.triangle_big.disableNormalViz();
-        this.diamond.disableNormalViz();
-        this.parallelogram.disableNormalViz();
+        this.orange_triangle_big.disableNormalViz();
+        this.blue_triangle_big.disableNormalViz();
+        this.pink_triangle_big.disableNormalViz();
+        this.red_triangle_big.disableNormalViz();
+        this.purple_triangle_big.disableNormalViz();
+        this.green_diamond.disableNormalViz();
+        this.yellow_parallelogram.disableNormalViz();
     }
 }
 
