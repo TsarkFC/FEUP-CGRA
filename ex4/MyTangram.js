@@ -18,55 +18,6 @@ class MyTangram extends CGFobject {
     }
 
     initMaterials(scene) {
-        // Green colour
-        this.green = new CGFappearance(scene);
-        this.green.setAmbient(0, 0, 0, 1.0);
-        this.green.setDiffuse(0, 0, 0, 1.0);
-        this.green.setSpecular(0, 1, 0, 1.0);
-        this.green.setShininess(10.0);
-
-        // Yellow colour
-        this.yellow = new CGFappearance(scene);
-        this.yellow.setAmbient(0.0, 0.0, 0.0, 1.0);
-        this.yellow.setDiffuse(1, 1, 0, 1.0);
-        this.yellow.setSpecular(1, 1, 0, 1.0);
-        this.yellow.setShininess(10.0);
-
-        // Orange colour
-        this.orange = new CGFappearance(scene);
-        this.orange.setAmbient(0, 0, 0, 1.0);
-        this.orange.setDiffuse(1, 165/255, 0, 1.0);
-        this.orange.setSpecular(1, 165/255, 0, 1.0);
-        this.orange.setShininess(10.0);
-
-        // Blue colour
-        this.blue = new CGFappearance(scene);
-        this.blue.setAmbient(0, 0, 0, 1.0);
-        this.blue.setDiffuse(0, 0, 1, 1.0);
-        this.blue.setSpecular(0, 0, 1, 1.0);
-        this.blue.setShininess(10.0);
-
-        // Pink colour
-        this.pink = new CGFappearance(scene);
-        this.pink.setAmbient(0, 0, 0, 1.0);
-        this.pink.setDiffuse(1, 102/255, 204/255, 1.0);
-        this.pink.setSpecular(1, 102/255, 204/255, 1.0);
-        this.pink.setShininess(10.0);
-
-        // Red colour
-        this.red = new CGFappearance(scene);
-        this.red.setAmbient(0, 0, 0, 1.0);
-        this.red.setDiffuse(1, 0, 0, 1.0);
-        this.red.setSpecular(1, 0, 0, 1.0);
-        this.red.setShininess(10.0);
-
-        // Purple colour
-        this.purple = new CGFappearance(scene);
-        this.purple.setAmbient(0, 0, 0, 1.0);
-        this.purple.setDiffuse(200/255, 43/255, 226/255, 1.0);
-        this.purple.setSpecular(200/255, 43/255, 226/255, 1.0);
-        this.purple.setShininess(10.0);
-
         //------ Texture Material
         this.texture = new CGFappearance(scene);
         this.texture.setAmbient(0.1, 0.1, 0.1, 1);

@@ -25,6 +25,13 @@ class MyInterface extends CGFinterface {
         //Checkbox for Tangram
         this.gui.add(this.scene, 'displayTangram').name('Display Tangram');
 
+        //Checkbox for Cube
+        this.gui.add(this.scene, 'displayCube').name('Display Cube');
+
+        //Checkbox for linear interpolation
+        this.gui.add(this.scene, 'linearInt').name('Linear Interpolation');
+
+
         //Dropdown for textures
         this.gui.add(this.scene, 'selectedTexture', this.scene.textureIds).name('Selected Texture').onChange(this.scene.updateAppliedTexture.bind(this.scene));
         //Dropdown for wrapping (S)
