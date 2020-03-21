@@ -10,11 +10,11 @@ class MyTangram extends CGFobject {
 		
         this.green_diamond = new MyDiamond(this.scene);
         this.yellow_parallelogram = new MyParallelogram(this.scene);
-        this.orange_triangle_big = new MyTriangleBig(this.scene);
-        this.blue_triangle_big = new MyTriangleBig1(this.scene);
-        this.pink_triangle_big = new MyTriangleBig2(this.scene);
-        this.red_triangle_big = new MyTriangleBig3(this.scene);
-        this.purple_triangle_big = new MyTriangleBig4(this.scene);
+        this.orange_triangle_big = new MyTriangleBig(this.scene, "orange");
+        this.blue_triangle_big = new MyTriangleBig(this.scene, "blue");
+        this.pink_triangle_big = new MyTriangleBig(this.scene, "pink");
+        this.red_triangle_big = new MyTriangleBig(this.scene, "red");
+        this.purple_triangle_big = new MyTriangleBig(this.scene, "purple");
     }
 
     initMaterials(scene) {
