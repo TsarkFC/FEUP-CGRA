@@ -45,6 +45,8 @@ class MyUnitCubeQuad extends CGFobject {
     
 	display(){
         this.texture.apply();
+        if (this.scene.linearInt) this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.LINEAR);
+        else this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.NEAREST);
 
         this.scene.pushMatrix();
         this.scene.translate(0,0,0.5);
@@ -70,7 +72,9 @@ class MyUnitCubeQuad extends CGFobject {
         this.scene.popMatrix();
 
         this.textureBottom.apply();
-
+        if (this.scene.linearInt) this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.LINEAR);
+        else this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.NEAREST);
+        
         this.scene.pushMatrix();
         this.scene.translate(0,-0.5,0);
         this.scene.rotate(Math.PI/2, 1, 0, 0);
@@ -78,6 +82,8 @@ class MyUnitCubeQuad extends CGFobject {
         this.scene.popMatrix();
 
         this.textureTop.apply();
+        if (this.scene.linearInt) this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.LINEAR);
+        else this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.NEAREST);
 
         this.scene.pushMatrix();
         this.scene.translate(0,0.5,0);
