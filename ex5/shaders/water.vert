@@ -11,13 +11,15 @@ varying vec2 vTextureCoord;
 uniform sampler2D uSamplerWater;
 uniform sampler2D uSampler2;
 uniform float timeFactor;
+uniform float normScale;
 
 void main() {
+    vec3 offset=vec3(0.0,0.0,0.0);
+	
+	vTextureCoord = aTextureCoord;
 
-    vTextureCoord = aTextureCoord;
+	vec4 filterer = texture2D(uSampler2, mod(vTextureCoord+vec2(timeFactor*.01,timeFactor*.01), 1.0));
 
-    vec3 offset=aVertexNormal*texture2D(uSampler2, vTextureCoord).b * 0.05;
-    vec3 offset_mov=aVertexNormal*texture2D(uSampler2, vTextureCoord + sin(0.005*timeFactor)).b * 0.05;
-
-	gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition + offset + offset_mov, 1.0);
+	gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition , 1.0);
+	gl_Position.y += (filterer.y - 0.5)* 0.5 *  normScale; 
 }
