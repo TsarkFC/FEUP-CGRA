@@ -1,0 +1,3 @@
+[submodule "cgra-proj"]
+	path = cgra-proj
+	url = https://github.com/TsarkFC/cgra-proj
